@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactTypescriptFormsApp/static/css/main.e6c13ad2.css",
+    "main.js": "/reactTypescriptFormsApp/static/js/main.8297e263.js",
+    "index.html": "/reactTypescriptFormsApp/index.html",
+    "main.e6c13ad2.css.map": "/reactTypescriptFormsApp/static/css/main.e6c13ad2.css.map",
+    "main.8297e263.js.map": "/reactTypescriptFormsApp/static/js/main.8297e263.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8297e263.js"
+  ]
+}
