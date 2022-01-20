@@ -1,0 +1,7 @@
+.form-list li{
+    text-align: left;
+}
+
+.form-list input, .form-list textarea{
+    width: 100%;
+}

@@ -1,7 +1,18 @@
 import React from 'react';
+import { FormList } from '../form-list';
+import { FormTypeList } from '../form-type-list';
+// import { Form } from '../interfaces/interfaces';
+import { Row } from '../row';
 
-export const AddFormPage: React.FC = () => {
+interface AddFormProps{
+    addForm: (inputType: string) => void
+}
+
+export const AddFormPage: React.FC<AddFormProps> = ({addForm}) => {
     return(
-        <h1>AddForm</h1>
+        <div className='px-4 py-5 my-5 text-center'>
+            <h1>AddForm</h1>
+            <Row left={<FormTypeList addForm={addForm}/>} right={<FormList/>}/>
+        </div>
     )
 }
