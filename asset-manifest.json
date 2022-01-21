@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/reactTypescriptFormsApp/static/css/main.56fc78b1.css",
-    "main.js": "/reactTypescriptFormsApp/static/js/main.5a39a55e.js",
+    "main.css": "/reactTypescriptFormsApp/static/css/main.19e3d954.css",
+    "main.js": "/reactTypescriptFormsApp/static/js/main.a607fc01.js",
     "index.html": "/reactTypescriptFormsApp/index.html",
-    "main.56fc78b1.css.map": "/reactTypescriptFormsApp/static/css/main.56fc78b1.css.map",
-    "main.5a39a55e.js.map": "/reactTypescriptFormsApp/static/js/main.5a39a55e.js.map"
+    "main.19e3d954.css.map": "/reactTypescriptFormsApp/static/css/main.19e3d954.css.map",
+    "main.a607fc01.js.map": "/reactTypescriptFormsApp/static/js/main.a607fc01.js.map"
   },
   "entrypoints": [
-    "static/css/main.56fc78b1.css",
-    "static/js/main.5a39a55e.js"
+    "static/css/main.19e3d954.css",
+    "static/js/main.a607fc01.js"
   ]
 }
