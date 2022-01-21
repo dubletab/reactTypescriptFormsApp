@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormList } from '../form-list';
-import { FormTypeList } from '../form-type-list';
+import { SelectFormTypeList } from '../select-form-type';
 // import { Form } from '../interfaces/interfaces';
 import { Row } from '../row';
 
@@ -11,9 +11,9 @@ interface AddFormProps{
 
 export const AddFormPage: React.FC<AddFormProps> = ({addForm, deleteForm}) => {
     return(
-        <div className='px-4 py-5 my-5 text-center'>
-            <h1>AddForm</h1>
-            <Row left={<FormTypeList addForm={addForm}/>} right={<FormList deleteForm={deleteForm}/>}/>
+        <div className='px-4 py-5 my-3 text-center'>
+            <h1 className='mb-5'>AddForm</h1>
+            <Row left={<SelectFormTypeList addForm={addForm}/>} right={<FormList deleteForm={deleteForm}/>}/>
         </div>
     )
 }

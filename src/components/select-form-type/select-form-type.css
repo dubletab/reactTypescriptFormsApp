@@ -1,0 +1,17 @@
+.select-form-type{
+    position: sticky;
+    top: 0px;
+    user-select: none;
+}
+
+.select-form-type li{
+    cursor: pointer;
+}
+
+.select-form-type li span{
+    background-color: #007bff;
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+}
+

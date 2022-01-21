@@ -8,7 +8,7 @@ interface FormListProps{
 
 export const FormList: React.FC<FormListProps> = ({deleteForm}) => {
     const forms = useContext(FormsContext);
-    const liForms = forms?.map(item=>{
+    const liForms = forms.map(item=>{
         let field;
         if(item.inputType === 'textarea'){
             field = (<textarea disabled></textarea>)
@@ -19,7 +19,7 @@ export const FormList: React.FC<FormListProps> = ({deleteForm}) => {
         <li key={item.id} className='list-group-item text-left'>
             <div className='d-flex justify-content-between'>
                 <p className=''>{item.inputType.toUpperCase()}</p>
-                <i className="fas fa-times" onClick={()=> deleteForm(item.id)}></i>
+                <i className="fas fa-times" onClick={()=> deleteForm(item.id)} title='Удалить форму'></i>
             </div>
             
             {field}

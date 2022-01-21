@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { FormsContext } from '../forms-context/forms-context';
+import './view-form-list.css';
 
 export const ViewFormList: React.FC = () => {
     const forms = useContext(FormsContext);
@@ -11,7 +12,7 @@ export const ViewFormList: React.FC = () => {
         )
     })
     return(
-        <div className='form-list'>
+        <div className='view-form-list'>
             <h4> View data on forms: </h4>
             <ul className='list-group list-group-flush'>
             {liForms}
