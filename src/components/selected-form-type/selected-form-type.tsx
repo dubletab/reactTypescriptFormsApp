@@ -14,7 +14,7 @@ export const SelectedFormType: React.FC = () => {
         if(countForms === 0) continue;
         const fieldCount = (
             <div>
-                <span className="badge badge-primary badge-pill" title='количество добавленных форм'>{countForms}</span>
+                <span className="badge" title='количество добавленных форм'>{countForms}</span>
             </div>);
 
         formTypeList.push(

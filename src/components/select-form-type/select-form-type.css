@@ -1,6 +1,6 @@
 .select-form-type{
     position: sticky;
-    top: 0px;
+    top: 10px;
     user-select: none;
 }
 

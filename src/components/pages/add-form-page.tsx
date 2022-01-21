@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormList } from '../form-list';
 import { SelectFormTypeList } from '../select-form-type';
-// import { Form } from '../interfaces/interfaces';
 import { Row } from '../row';
 
 interface AddFormProps{

@@ -16,7 +16,7 @@ export const SelectFormTypeList: React.FC<SelectFormTypeListProps> = ({addForm})
         const countForms = forms.filter(item=> item.inputType === field).length
         const fieldCount = countForms > 0 ? (
             <div>
-                <span className="badge badge-primary badge-pill" title='количество добавленных форм'>{countForms}</span>
+                <span className="badge" title='количество добавленных форм'>{countForms}</span>
             </div>) : null;
 
         formTypeList.push(
