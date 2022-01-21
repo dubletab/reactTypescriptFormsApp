@@ -1,34 +1,30 @@
 import React, {useContext} from 'react';
 import { FormsContext } from '../forms-context/forms-context';
-import './form-list.css';
 
-interface FormListProps{
-    deleteForm: (id: number) => void
+interface EditFormListProps{
+    editFormData: (value: string, id: number) => void
 }
 
-export const FormList: React.FC<FormListProps> = ({deleteForm}) => {
+export const EditFormList: React.FC<EditFormListProps> = ({editFormData}) => {
     const forms = useContext(FormsContext);
+
     const liForms = forms?.map(item=>{
         let field;
         if(item.inputType === 'textarea'){
-            field = (<textarea disabled></textarea>)
+            field = (<textarea value={item.inputData} onChange={(event)=>{editFormData(event.target.value, item.id)}}></textarea>)
         }else{
-            field = (<input type={item.inputType} disabled/>)
+            field = (<input type={item.inputType} value={item.inputData} onChange={(event)=>{editFormData(event.target.value, item.id)}}/>)
         }
         return (
         <li key={item.id} className='list-group-item text-left'>
-            <div className='d-flex justify-content-between'>
-                <p className=''>{item.inputType.toUpperCase()}</p>
-                <i className="fas fa-times" onClick={()=> deleteForm(item.id)}></i>
-            </div>
-            
+            <p className=''>{item.inputType.toUpperCase()}</p>
             {field}
         </li>
         )
     })
     return(
         <div className='form-list'>
-            <h4> List of added forms: </h4>
+            <h4> List of Edit forms: </h4>
             <ul className='list-group list-group-flush'>
             {liForms}
             </ul>

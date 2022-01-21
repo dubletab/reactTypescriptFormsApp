@@ -19,15 +19,32 @@ export const App: React.FC = () => {
     })
   }
 
+  const deleteForm = (id: number) => {
+      setForms(prev => {
+          return prev.filter(item => {
+              return item.id !== id
+          })
+      })
+  }
+
+  const editFormData = (value: string, id: number) => {
+    setForms(prev => {
+        return prev.map(item => {
+            if(item.id === id) item.inputData = value;
+            return item;
+        })
+    })
+  }
+
   return (
     <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <Router>
         <Header/>
         <FormsContext.Provider value={forms}>
           <Routes>
-              <Route path='/' element={<AddFormPage addForm={addForm}/>}/>
-              <Route path='/edit' element={<EditFormPage/>}/>
-              <Route path='/view' element={<ViewFormPage/>}/>
+              <Route path='/reactTypescriptFormsApp/' element={<AddFormPage addForm={addForm} deleteForm={deleteForm}/>}/>
+              <Route path='/reactTypescriptFormsApp/edit' element={<EditFormPage editFormData={editFormData}/>}/>
+              <Route path='/reactTypescriptFormsApp/view' element={<ViewFormPage/>}/>
               <Route path='*' element={<NotFoundPage/>}/>
           </Routes>
         </FormsContext.Provider>

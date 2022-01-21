@@ -1,5 +1,5 @@
 export interface IForm{
     inputType: string
-    inputData: any
+    inputData: string
     id: number
 }

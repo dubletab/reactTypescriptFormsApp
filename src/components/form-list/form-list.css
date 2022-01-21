@@ -5,3 +5,7 @@
 .form-list input, .form-list textarea{
     width: 100%;
 }
+
+.form-list i{
+    cursor: pointer;
+}
